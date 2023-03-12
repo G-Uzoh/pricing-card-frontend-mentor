@@ -21,14 +21,8 @@ h2, h4, p {
 }
 
 #card {
-    width: 600px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     overflow: hidden;
-    box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.35);
+    box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.35);
     border-radius: 5px;
 }
 
@@ -57,15 +51,15 @@ h2, h4, p {
     width: 100%;
     height: 55%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 #bottom-left-layer {
-    width: 50%;
-    height: 100%;
     background-color: #2ab2af;
     color: white;
     padding: 25px;
+    height: 100%;
+    flex-basis: 50%;
 }
 
 #bottom-left-layer h4 {
@@ -74,7 +68,7 @@ h2, h4, p {
 
 #rate {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -85,8 +79,6 @@ h2, h4, p {
 
 #frequency {
     color: #e5eff5;
-    position: relative;
-    top: 7px;
     margin-left: 10px;
     font-size: 0.85rem;
     opacity: 0.7;
@@ -110,11 +102,11 @@ button:hover {
 }
 
 #bottom-right-layer {
-    width: 50%;
-    height: 100%;
     background-color: #2EBFBD;
     color: white;
     padding: 25px;
+    height: 100%;
+    flex-basis: 50%;
 }
 
 ul {
@@ -124,4 +116,15 @@ ul {
     font-size: 0.85rem;
     opacity: 0.8;
     line-height: 1.2rem;
+}
+
+@media (min-width: 576px) {
+    #card {
+        width: 550px;
+        height: 400px;
+    }
+
+    #bottom-layer {
+        flex-direction: row;
+    }
 }
